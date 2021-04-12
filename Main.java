@@ -1,7 +1,14 @@
-public class Main {
-Ahorcado test1 = new Ahorcado();
-
+class Main {
+  public static void main(String[] args) {
   
-    System.out.println( test1.getNombre() );
-  
+    control controlJuego = new control();
+    Ahorcado test1 = new Ahorcado();
+    
+    //System.out.println("Hello " + test1.getNombre());
+    test1.imprimirImagenAhorcado();
+    for(int i=0;i<10; i++){
+    controlJuego.escogerPalabraAleatoria();
+    
+    }
+  }
 }
