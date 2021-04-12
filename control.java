@@ -1,1 +1,1 @@
-control 
+public class control{}
