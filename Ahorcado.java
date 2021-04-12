@@ -1,17 +1,75 @@
 public class Ahorcado {
 
-    private int conteoErrores;
-
+    
     public Ahorcado() {
-        conteoErrores = 1;
+        
     }
 
-    public void imprimirImagenAhorcado() {
-        switch (conteoErrores) {
+    public void imprimirImagenAhorcado(Jugador jugador) {
+        switch (jugador.getConteoErrores()) {
         case 1:
             System.out.println("|--------");
-            System.out.println("|    \\O/");
-            System.out.println("|     I");
+            System.out.println("|    ");
+            System.out.println("|    ");
+            System.out.println("|   ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            break;
+
+        case 2:
+            System.out.println("|--------");
+            System.out.println("|    😵");
+            System.out.println("|     ");
+            System.out.println("|    ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            break;
+        
+        case 3:
+            System.out.println("|--------");
+            System.out.println("|    \\😵");
+            System.out.println("|     ");
+            System.out.println("|    ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            break;
+
+        case 4:
+            System.out.println("|--------");
+            System.out.println("|    \\😵 /");
+            System.out.println("|     ");
+            System.out.println("|    ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            break;
+
+        case 5:
+            System.out.println("|--------");
+            System.out.println("|    \\😵 /");
+            System.out.println("|     👕");
+            System.out.println("|    ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            break;
+
+        case 6:
+            System.out.println("|--------");
+            System.out.println("|    \\😵 /");
+            System.out.println("|     👕");
+            System.out.println("|     /");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            System.out.println("|        ");
+            break;
+        case 7:
+            System.out.println("|--------");
+            System.out.println("|    \\😵 /");
+            System.out.println("|     👕");
             System.out.println("|     /\\");
             System.out.println("|        ");
             System.out.println("|        ");
@@ -22,8 +80,6 @@ public class Ahorcado {
 
     }
 
-    public int getConteoErrores() {
-        return conteoErrores;
-    }
+    
 
 }

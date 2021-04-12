@@ -3,17 +3,18 @@ import java.util.Random;
 
 public class control{
 
-    private String[] palabras= {"Perro", "Gato", "Carro", "XD", "México"};
+    private String[] palabras= {"Perro", "Gato", "Carro", "XD", "México","Prueba", "QueSesto", "MadreMiaWilly"};
     private String palabra;
-    private boolean estadoDeJuego = false;
-
+    private boolean juegoGanado;
     private Random rand = new Random();
+    
     public control(){
 
     }
+    
     public void iniciarJuego() {
-        estadoDeJuego = true;
-        System.out.println("Juego iniciado");
+        juegoGanado = false; //false porque no se ha ganado arre(8
+        System.out.println("Juego iniciado" );
     }
 
     public boolean seguirJugando() {
@@ -21,21 +22,20 @@ public class control{
         Scanner scan = new Scanner(System.in);
         String opcion = scan.nextLine();
         String op2 = opcion.toLowerCase();
-       
+        
         if (op2.equals("s") == true) {
-            estadoDeJuego = true;
-            System.out.println("Seguir jugando " + estadoDeJuego);
+            System.out.println("Seguir jugando");
         } else if (op2.equals("n") == true) {
-            estadoDeJuego = false;
-            System.out.println("Fin del juego " + estadoDeJuego);
+            juegoGanado = true;
+            System.out.println("Fin del juego");
         } else {
             System.out.println("No valido");
         }
-        return estadoDeJuego;
+        return juegoGanado;
     }
 
     public boolean isEstadoDeJuego() {
-        return estadoDeJuego;
+        return juegoGanado;
     }
 
     public void escogerPalabraAleatoria(){
