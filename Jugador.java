@@ -7,13 +7,8 @@ public class Jugador
     private ArrayList<String> letrasIncorrectas = new ArrayList<>();
 
     public Jugador(){
-        letrasCorrectas.add("p");
-        letrasCorrectas.add("R");
-        letrasCorrectas.add("e");
-        letrasCorrectas.add("o");
-        letrasCorrectas.add("l");
 
-        conteoErrores = 6;
+        conteoErrores = 0;
     }
 
 
@@ -23,5 +18,9 @@ public ArrayList<String> getLetrasCorrectas(){
 
 public int getConteoErrores() {
         return conteoErrores;
+    }
+
+public void setConteoErrores(int numero) {
+        conteoErrores = numero;
     }
 }
