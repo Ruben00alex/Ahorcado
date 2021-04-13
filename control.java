@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+//import org.apache.commons.lang3.StringUtils;
 
 public class control{
 
@@ -13,7 +14,7 @@ public class control{
     }
     
     public void iniciarJuego() {
-        juegoGanado = false; //false porque no se ha ganado arre(8
+        juegoGanado = false;
         System.out.println("Juego iniciado" );
     }
 
@@ -38,6 +39,17 @@ public class control{
         return juegoGanado;
     }
 
+    public void imprimirPalabra(Jugador jugador){
+        jugador.getLetrasCorrectas().replaceAll(String::toLowerCase);//Cambia getLetrasCorrectas a minuscula.
+        for(int i = 0 ; i < palabra.length(); i++ ){
+            if(jugador.getLetrasCorrectas().contains(String.valueOf( palabra.charAt(i) ).toLowerCase() ) ){
+                System.out.print(String.valueOf(palabra.charAt(i) ));
+            }else{System.out.print("_ ");}
+            
+            //ESTODOTEAAM WUUUUUUUUU
+            }
+        }
+
     public void escogerPalabraAleatoria(){
         palabra = palabras[rand.nextInt(palabras.length)];
 
@@ -45,3 +57,20 @@ public class control{
 
     }
 }
+     
+
+     
+
+    
+
+        
+
+           
+                
+            
+
+        
+
+    
+
+     

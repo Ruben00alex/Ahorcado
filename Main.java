@@ -10,6 +10,9 @@ class Main {
     for(int i=0;i<10; i++){
     controlJuego.escogerPalabraAleatoria();
     
+    controlJuego.imprimirPalabra(jugadorA);
+    System.out.println(" ");
+    System.out.println(" ");
     }
     controlJuego.iniciarJuego();
                       
