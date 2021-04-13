@@ -47,21 +47,24 @@ List<Integer> listWithDuplicates = Lists.newArrayList(0, 1, 2, 3, 0, 0);
             valRet = false;
             jug1.setConteoErrores(jug1.getConteoErrores() + 1);
         }
-        if(jug1.getConteoErrores() > 6 || jug1.getLetrasCorrectas().size()>= letras ){
+        if(jug1.getConteoErrores() >= 6 || jug1.getLetrasCorrectas().size()>= letras ){
             System.out.println("FIN DEL JUEGO.");
             juegoGanado = true;
         }
         return valRet;
 
     }
-    public void iniciarJuego() {
+    public void iniciarJuego(Jugador jug1) {
         this.escogerPalabraAleatoria();
         juegoGanado = false;
+        jug1.setConteoErrores(0);
+        jug1.getLetrasCorrectas().removeAll(jug1.getLetrasCorrectas());
+
         System.out.println("Juego iniciado" );
     }
 
-    public boolean seguirJugando() {
-        System.out.println("Desea seguir jugando? S/N ");
+    public boolean seguirJugando(Jugador jug1) {
+        System.out.println("Desea seguir jugando? S/N \n");
         Scanner scan = new Scanner(System.in);
         String opcion = scan.nextLine();
         String op2 = opcion.toLowerCase();
@@ -69,7 +72,7 @@ List<Integer> listWithDuplicates = Lists.newArrayList(0, 1, 2, 3, 0, 0);
         if (op2.equals("s") == true) {
             System.out.println("Seguir jugando");
             juegoGanado = false;
-            this.iniciarJuego();
+            this.iniciarJuego(jug1);
         } else if (op2.equals("n") == true) {
             juegoGanado = true;
             System.out.println("Fin del juego");
@@ -91,7 +94,7 @@ List<Integer> listWithDuplicates = Lists.newArrayList(0, 1, 2, 3, 0, 0);
             }else{System.out.print("_ ");}
             
             //ESTODOTEAAM WUUUUUUUUU
-            }
+            }System.out.print(" ");
         }
 
     public void escogerPalabraAleatoria(){

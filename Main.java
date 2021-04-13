@@ -17,7 +17,7 @@ class Main {
     }
     */
 
-    controlJuego.iniciarJuego();
+    controlJuego.iniciarJuego(jugadorA);
    /* ahorcado.imprimirImagenAhorcado(jugadorA);
     controlJuego.imprimirPalabra(jugadorA);
      */                 
@@ -27,7 +27,7 @@ class Main {
             {
             ahorcado.imprimirImagenAhorcado(jugadorA);
             controlJuego.imprimirPalabra(jugadorA);
-            System.out.println("Ingrese guess:");
+            System.out.println("Ingrese letra:");
             Scanner ingresada = new Scanner(System.in);
             String letra = ingresada.nextLine();
             String letraMin = letra.toLowerCase();
@@ -37,7 +37,7 @@ class Main {
             }
             ahorcado.imprimirImagenAhorcado(jugadorA);
             controlJuego.imprimirPalabra(jugadorA);
-            controlJuego.seguirJugando();
+            controlJuego.seguirJugando(jugadorA);
         }
   }
 }
