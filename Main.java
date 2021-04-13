@@ -23,10 +23,16 @@ class Main {
      */                 
         while(controlJuego.isEstadoDeJuego() == false)
         {
-            while(controlJuego.isEstadoDeJuego() == false)
-            {
             ahorcado.imprimirImagenAhorcado(jugadorA);
             controlJuego.imprimirPalabra(jugadorA);
+
+            while(controlJuego.isEstadoDeJuego() == false)
+            {
+            System.out.println("LETRAS INCORRECTAS:");
+            for(String st : jugadorA.getLetrasIncorrectas()){
+            System.out.print(st+" ");}
+            System.out.println("\n\n");
+
             System.out.println("Ingrese letra:");
             Scanner ingresada = new Scanner(System.in);
             String letra = ingresada.nextLine();
@@ -34,9 +40,13 @@ class Main {
             
             //controlJuego.escogerPalabraAleatoria();
             controlJuego.letraEnPalabra( letraMin , jugadorA );
-            }
             ahorcado.imprimirImagenAhorcado(jugadorA);
+            
             controlJuego.imprimirPalabra(jugadorA);
+            
+            
+            }
+            System.out.println("Salio");
             controlJuego.seguirJugando(jugadorA);
         }
   }

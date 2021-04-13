@@ -16,6 +16,10 @@ public ArrayList<String> getLetrasCorrectas(){
     return letrasCorrectas;
 }
 
+public ArrayList<String> getLetrasIncorrectas(){
+    return letrasIncorrectas;
+}
+
 public int getConteoErrores() {
         return conteoErrores;
     }
