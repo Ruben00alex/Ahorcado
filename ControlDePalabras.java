@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.*; 
 //import org.apache.commons.lang3.StringUtils;
 
-public class control{
+public class ControlDePalabras{
 
     private String[] palabras= {"Perro", "Gato", "Carro", "Programacion", "Mexico","Prueba", "Murcielago", "Vancouver"};
     private String palabra;
@@ -12,7 +12,8 @@ public class control{
     private boolean juegoGanado;
     private Random rand = new Random();
     private int letras ;
-    public control(){
+    
+    public ControlDePalabras(){
 
     }
     
@@ -30,7 +31,7 @@ public class control{
             jug1.setConteoErrores(jug1.getConteoErrores() + 1);
 
         }
-        System.out.println(jug1.getLetrasCorrectas().size() +" ;"  + letras);  
+        //System.out.println(jug1.getLetrasCorrectas().size() +" ;"  + letras);  
 
         if(jug1.getConteoErrores() >= 6 || jug1.getLetrasCorrectas().size()>= letras ){
             System.out.println("FIN DEL JUEGO.");
@@ -89,6 +90,7 @@ public class control{
         palabra = palabras[numRand];
         System.out.println(palabra.length());
         letras = 0;
+        
         for(int i = 0 ; i < palabra.length(); i++){
             if(!palabraSinRepeticiones.contains(String.valueOf(palabra.charAt(i)).toLowerCase())){
                 letras ++;

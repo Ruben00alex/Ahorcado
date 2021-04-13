@@ -2,16 +2,16 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
   
-    control controlJuego = new control();
+    ControlDePalabras controlJuego = new ControlDePalabras();
     Ahorcado ahorcado = new Ahorcado();
     Jugador jugadorA = new Jugador();
     
     //System.out.println("Hello " + test1.getNombre());
     //ahorcado.imprimirImagenAhorcado(jugadorA);
     /*for(int i=0;i<10; i++){
-    controlJuego.escogerPalabraAleatoria();
+    ControlDePalabrasJuego.escogerPalabraAleatoria();
     
-    controlJuego.imprimirPalabra(jugadorA);
+    ControlDePalabrasJuego.imprimirPalabra(jugadorA);
     System.out.println(" ");
     System.out.println(" ");
     }
@@ -46,7 +46,7 @@ class Main {
             
             
             }
-            System.out.println("Salio");
+            System.out.println("FIN");
             controlJuego.seguirJugando(jugadorA);
         }
   }
